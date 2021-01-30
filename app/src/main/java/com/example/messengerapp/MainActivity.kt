@@ -1,5 +1,6 @@
 package com.example.messengerapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,15 @@ class MainActivity : AppCompatActivity() {
 
             Log.d("MainActivity", "email is : $email")
             Log.d("MainActivity", "password is : $password")
+        }
+
+        already_have_account_textView.setOnClickListener {
+            Log.d("MainActivity","Try to show login activity YOU CAN SIGN IN NOW")
+
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+
+
         }
 
 

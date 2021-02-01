@@ -1,7 +1,9 @@
 package com.example.messengerapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -9,6 +11,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_login)
+
+        val intent = Intent(this,MainActivity::class.java)
+        back_to_rigerster_textView.setOnClickListener {
+            startActivity(intent)
+        }
     }
 
 }
